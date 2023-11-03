@@ -22,21 +22,21 @@ Kasia.AddScore(9);
 Kasia.AddScore(8);
 
 
-var wynikAdama = Adam.Result;
-var wynikDaniela = Daniel.Result;
-var wynikKasi = Kasia.Result;
+var resultAdama = Adam.Result;
+var resultDaniela = Daniel.Result;
+var resultKasi = Kasia.Result;
 
-if (wynikAdama > wynikDaniela && wynikAdama > wynikKasi)
+if (resultAdama > resultDaniela && resultAdama > resultKasi)
 {
-    Console.WriteLine("Adam Kowalski 34 lat " + wynikAdama + " pkt" );
+    Console.WriteLine("Adam Kowalski 34 lat " + resultAdama + " pkt" );
 }
-if (wynikDaniela > wynikAdama && wynikDaniela > wynikKasi)
+if (resultDaniela > resultAdama && resultDaniela > resultKasi)
 {
-    Console.WriteLine("Daniel Walas 30 lat " + wynikDaniela + " pkt");
+    Console.WriteLine("Daniel Walas 30 lat " + resultDaniela + " pkt");
 }
-if (wynikKasi > wynikAdama && wynikKasi > wynikDaniela) 
+if (resultKasi > resultAdama && resultKasi > resultDaniela) 
 {
-    Console.WriteLine("Kasia Walczak 32 lata " + wynikKasi + " pkt");
+    Console.WriteLine("Kasia Walczak 32 lata " + resultKasi + " pkt");
 }
 
 
