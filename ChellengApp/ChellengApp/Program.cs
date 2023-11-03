@@ -1,71 +1,42 @@
-﻿int number = 2033;
-string numberInString = number.ToString();
-char[] letters = numberInString.ToArray();
+﻿using ChellengApp;
+using System.ComponentModel.Design;
 
-Console.WriteLine("Wynik dla liczby:" + number);
+Employee Adam = new Employee("Adam", "Kowalski", "34");
+Employee Daniel  = new Employee("Daniel", "Walas", "30");
+Employee Kasia = new Employee("Kasia", "Walczak", "32");
 
-int counter0 = 0;
-int counter1 = 0;
-int counter2 = 0;
-int counter3 = 0;
-int counter4 = 0;
-int counter5 = 0;
-int counter6 = 0;
-int counter7 = 0;
-int counter8 = 0;
-int counter9 = 0;
+Adam.AddScore(5);
+Adam.AddScore(3);
+Adam.AddScore(5);
+Adam.AddScore(7);
+Adam.AddScore(3);
+Daniel.AddScore(6);
+Daniel.AddScore(8);
+Daniel.AddScore(1);
+Daniel.AddScore(2);
+Daniel.AddScore(5);
+Kasia.AddScore(5);
+Kasia.AddScore(8);
+Kasia.AddScore(9);
+Kasia.AddScore(9);
+Kasia.AddScore(8);
 
-foreach (char letter in letters)
+
+var wynikAdama = Adam.Result;
+var wynikDaniela = Daniel.Result;
+var wynikKasi = Kasia.Result;
+
+if (wynikAdama > wynikDaniela && wynikAdama > wynikKasi)
 {
-    if (letter == '0')
-    {
-        counter0++;
-    }
-    else if (letter == '1')
-    {
-        counter1++;
-    }
-    else if (letter == '2')
-    {
-        counter2++;
-    }
-    else if (letter == '3')
-    {
-        counter3++;
-    }
-    else if (letter == '4')
-    {
-        counter4++;
-    }
-    else if (letter == '5')
-    {
-        counter5++;
-    }
-    else if (letter == '6')
-    {
-        counter6++;
-    }
-    else if (letter == '7')
-    {
-        counter7++;
-    }
-    else if (letter == '8')
-    {
-        counter8++;
-    }
-    else if (letter == '9')
-    {
-        counter9++;
-    }
+    Console.WriteLine("Adam Kowalski 34 lat " + wynikAdama + " pkt" );
 }
-Console.WriteLine("0=>" + counter0);
-Console.WriteLine("1=>" + counter1);
-Console.WriteLine("2=>" + counter2);
-Console.WriteLine("3=>" + counter3);
-Console.WriteLine("4=>" + counter4);
-Console.WriteLine("5=>" + counter5);
-Console.WriteLine("6=>" + counter6);
-Console.WriteLine("7=>" + counter7);
-Console.WriteLine("8=>" + counter8);
-Console.WriteLine("9=>" + counter9);
+if (wynikDaniela > wynikAdama && wynikDaniela > wynikKasi)
+{
+    Console.WriteLine("Daniel Walas 30 lat " + wynikDaniela + " pkt");
+}
+if (wynikKasi > wynikAdama && wynikKasi > wynikDaniela) 
+{
+    Console.WriteLine("Kasia Walczak 32 lata " + wynikKasi + " pkt");
+}
+
 
